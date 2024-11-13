@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif; /* Added font family for consistency */
+}
+
+body {
+    background-color: #FCB7C2; /* Soft pink background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, rgba(252, 183, 194, 0.8), rgba(255, 255, 255, 0.9)); /* Gradient background */
+}
+
+/* Main container styling */
+.container {
+    width: 85%;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ECD4DC; /* Soft cream background */
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    gap: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 5px 15px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(15px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+    transform: translate(-50%, -50%) scale(1.05); /* Slight scale effect on hover */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2), 0 15px 25px rgba(0, 0, 0, 0.25); /* Enhanced 3D shadow on hover */
+}
+
+/* Shaking animation for the paragraph */
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-10px); /* Move to the left */
+    }
+    50% {
+        transform: translateX(10px); /* Move to the right */
+    }
+    75% {
+        transform: translateX(-10px); /* Move to the left again */
+    }
+    100% {
+        transform: translateX(0); /* Return to the original position */
+    }
+}
+
+/* Paragraph styling */
+.para {
+    color: #006400;
+    font-size: 26px;
+    transition: transform 0.2s ease; /* Smooth transition */
+}
+
+.para:hover {
+    animation: shake 0.5s ease; /* Apply shake animation on hover */
+    animation-iteration-count: 1; /* Run the animation only once on hover */
+}
+
+/* Heading style */
+.heading {
+    color: #006400;
+    font-size: 32px;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    letter-spacing: 1px;
+    transition: transform 0.2s ease;
+}
+
+/* Button style */
+.jokebtn {
+    padding: 12px 50px;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(145deg, #F0ECF1, #D3C5B9); /* Gradient background */
+    color: #006400;
+    font-size: 26px;
+    font-weight: 500;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.15); /* 3D shadow for button */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.jokebtn:hover {
+    background: linear-gradient(145deg, #D3C5B9, #F0ECF1); /* Inverted gradient on hover */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2), 0 8px 16px rgba(0, 0, 0, 0.25); /* Enhanced shadow on hover */
+    transform: translateY(-5px); /* Button lifts on hover */
+}
+
+.jokebtn:active {
+    transform: translateY(2px); /* Slight depression on click */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.2); /* Shadow shrink on click */
+}
